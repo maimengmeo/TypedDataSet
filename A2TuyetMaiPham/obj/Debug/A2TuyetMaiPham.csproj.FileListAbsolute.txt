@@ -1,0 +1,16 @@
+C:\Users\Wilton Ngo\Documents\C#\A2TuyetMaiPham\A2TuyetMaiPham\obj\Debug\A2TuyetMaiPham.csproj.AssemblyReference.cache
+C:\Users\Wilton Ngo\Documents\C#\A2TuyetMaiPham\A2TuyetMaiPham\obj\Debug\A2TuyetMaiPham.csproj.SuggestedBindingRedirects.cache
+C:\Users\Wilton Ngo\Documents\C#\A2TuyetMaiPham\A2TuyetMaiPham\obj\Debug\MainWindow.g.cs
+C:\Users\Wilton Ngo\Documents\C#\A2TuyetMaiPham\A2TuyetMaiPham\obj\Debug\App.g.cs
+C:\Users\Wilton Ngo\Documents\C#\A2TuyetMaiPham\A2TuyetMaiPham\obj\Debug\A2TuyetMaiPham_MarkupCompile.cache
+C:\Users\Wilton Ngo\Documents\C#\A2TuyetMaiPham\A2TuyetMaiPham\obj\Debug\A2TuyetMaiPham_MarkupCompile.lref
+C:\Users\Wilton Ngo\Documents\C#\A2TuyetMaiPham\A2TuyetMaiPham\bin\Debug\A2TuyetMaiPham.exe.config
+C:\Users\Wilton Ngo\Documents\C#\A2TuyetMaiPham\A2TuyetMaiPham\bin\Debug\A2TuyetMaiPham.exe
+C:\Users\Wilton Ngo\Documents\C#\A2TuyetMaiPham\A2TuyetMaiPham\bin\Debug\A2TuyetMaiPham.pdb
+C:\Users\Wilton Ngo\Documents\C#\A2TuyetMaiPham\A2TuyetMaiPham\obj\Debug\MainWindow.baml
+C:\Users\Wilton Ngo\Documents\C#\A2TuyetMaiPham\A2TuyetMaiPham\obj\Debug\A2TuyetMaiPham.g.resources
+C:\Users\Wilton Ngo\Documents\C#\A2TuyetMaiPham\A2TuyetMaiPham\obj\Debug\A2TuyetMaiPham.Properties.Resources.resources
+C:\Users\Wilton Ngo\Documents\C#\A2TuyetMaiPham\A2TuyetMaiPham\obj\Debug\A2TuyetMaiPham.csproj.GenerateResource.cache
+C:\Users\Wilton Ngo\Documents\C#\A2TuyetMaiPham\A2TuyetMaiPham\obj\Debug\A2TuyetMaiPham.csproj.CoreCompileInputs.cache
+C:\Users\Wilton Ngo\Documents\C#\A2TuyetMaiPham\A2TuyetMaiPham\obj\Debug\A2TuyetMaiPham.exe
+C:\Users\Wilton Ngo\Documents\C#\A2TuyetMaiPham\A2TuyetMaiPham\obj\Debug\A2TuyetMaiPham.pdb
