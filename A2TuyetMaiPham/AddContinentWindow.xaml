@@ -7,9 +7,10 @@
         mc:Ignorable="d"
         Title="AddContinentWindow" Height="450" Width="800">
     <Grid>
-        <TextBox HorizontalAlignment="Left" Margin="192,118,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" AutomationProperties.IsRequiredForForm="True"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="340,108,0,0" VerticalAlignment="Top"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="212,179,0,0" VerticalAlignment="Top" Width="370"/>
+        <TextBox x:Name="txtInputContinent" HorizontalAlignment="Left" Margin="192,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" AutomationProperties.IsRequiredForForm="True"/>
+        <Button x:Name="btnAddContinent" Content="Add" HorizontalAlignment="Left" Margin="340,108,0,0" VerticalAlignment="Top" Click="btnAddContinent_Click"/>
+        <Label x:Name="lblMessage" Content="Label" HorizontalAlignment="Left" Margin="212,179,0,0" VerticalAlignment="Top" Width="370"/>
+        <Label Content="Continent Name" HorizontalAlignment="Left" Margin="78,116,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

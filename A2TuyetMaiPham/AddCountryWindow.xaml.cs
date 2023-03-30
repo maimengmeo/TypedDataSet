@@ -19,9 +19,20 @@ namespace A2TuyetMaiPham
     /// </summary>
     public partial class AddCountryWindow : Window
     {
-        public AddCountryWindow()
+        private WorldDBTableAdapters.CountryTableAdapter adpCountry;
+        private WorldDB.ContinentDataTable tblContinents;
+
+        public AddCountryWindow(WorldDBTableAdapters.CountryTableAdapter adpCountry,
+                                 WorldDB.ContinentDataTable tblContinents)
         {
             InitializeComponent();
+            this.adpCountry = adpCountry;
+            this.tblContinents = tblContinents;
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

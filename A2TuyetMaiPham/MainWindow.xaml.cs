@@ -51,8 +51,6 @@ namespace A2TuyetMaiPham
         {
             adpContinent.FillContinent(tblContinents);
             
-            cmbContinents.Items.Clear();
-            
             cmbContinents.ItemsSource = tblContinents.DefaultView;
             cmbContinents.DisplayMemberPath = "ContinentName";
             cmbContinents.SelectedValuePath = "ContinentId";
@@ -107,21 +105,26 @@ namespace A2TuyetMaiPham
 
         private void btnAddContinent_Click(object sender, RoutedEventArgs e)
         {
-            addContinentWindow = new AddContinentWindow();
+            addContinentWindow = new AddContinentWindow(adpContinent,tblContinents);
             addContinentWindow.Owner = this;
             addContinentWindow.ShowDialog();
+
+            if (addContinentWindow.isAdded == true)
+            {
+                GetAllContinents();
+            }
         }
 
         private void btnAddCountry_Click(object sender, RoutedEventArgs e)
         {
-            addCountryWindow = new AddCountryWindow();
+            addCountryWindow = new AddCountryWindow(tblContinent, adpCountry);
             addCountryWindow.Owner = this;
             addCountryWindow.ShowDialog();
         }
 
         private void btnAddCity_Click(object sender, RoutedEventArgs e)
         {
-            addCityWindow = new AddCityWindow();
+            addCityWindow = new AddCityWindow(adpCity);
             addCityWindow.Owner = this;
             addCityWindow.ShowDialog();
         }

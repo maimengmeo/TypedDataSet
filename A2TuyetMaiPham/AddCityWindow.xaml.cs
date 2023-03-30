@@ -19,9 +19,11 @@ namespace A2TuyetMaiPham
     /// </summary>
     public partial class AddCityWindow : Window
     {
-        public AddCityWindow()
+        WorldDBTableAdapters.CityTableAdapter adpCity;
+        public AddCityWindow(WorldDBTableAdapters.CityTableAdapter adpCity)
         {
             InitializeComponent();
+            this.adpCity = adpCity;
         }
     }
 }
