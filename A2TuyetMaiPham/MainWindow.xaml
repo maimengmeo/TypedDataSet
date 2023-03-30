@@ -10,7 +10,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="/map.jpg" Opacity="0.4"/>
         </Grid.Background>
-        <ComboBox x:Name="cmbContinents" HorizontalAlignment="Left" Margin="67,103,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cmbContinents_SelectionChanged" Text="Select Continent">
+        <ComboBox x:Name="cmbContinents" HorizontalAlignment="Left" Margin="202,92,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cmbContinents_SelectionChanged" Text="Select Continent">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1">
                     <GradientStop Color="#FFF0F0F0"/>
@@ -18,36 +18,36 @@
                 </LinearGradientBrush>
             </ComboBox.Background>
         </ComboBox>
-        <ListBox x:Name="lstCountries" d:ItemsSource="{d:SampleData ItemCount=5}" Height="NaN" Margin="242,78,408,208" Width="NaN" SelectionChanged="lstCountries_SelectionChanged"/>
-        <Label x:Name="lblLanguages" Content="" HorizontalAlignment="Left" Margin="306,237,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.368,0.579" Width="94" BorderBrush="#FFA84448" Background="#FFF6E1C3"/>
-        <Label x:Name="lblCurrency" Content="" HorizontalAlignment="Left" Margin="302,286,0,0" VerticalAlignment="Top" Width="98" BorderBrush="#FFA84448" Background="#FFF6E1C3"/>
-        <DataGrid x:Name="grdCities" d:ItemsSource="{d:SampleData ItemCount=5}" Height="NaN" Margin="447,77,36,208" Width="NaN"/>
-        <Button x:Name="btnAddContinent" Content="Add Continent" HorizontalAlignment="Left" Margin="83,345,0,0" VerticalAlignment="Top" Click="btnAddContinent_Click" Background="#FFF6E1C3" FontSize="13" Foreground="#FFA84448" BorderBrush="#FFF6E1C3" Height="30" Width="100">
+        <ListBox x:Name="lstCountries" d:ItemsSource="{d:SampleData ItemCount=5}" Height="NaN" Margin="202,153,459,133" SelectionChanged="lstCountries_SelectionChanged" Width="130"/>
+        <Label x:Name="lblLanguages" Content="" HorizontalAlignment="Left" Margin="247,314,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.541" Width="94" BorderBrush="#FFA84448" Background="#FFF6E1C3"/>
+        <Label x:Name="lblCurrency" Content="" HorizontalAlignment="Left" Margin="243,347,0,0" VerticalAlignment="Top" Width="98" BorderBrush="#FFA84448" Background="#FFF6E1C3"/>
+        <DataGrid x:Name="grdCities" d:ItemsSource="{d:SampleData ItemCount=5}" Height="NaN" Margin="402,90,78,133" Width="320"/>
+        <Button x:Name="btnAddContinent" Content="Add Continent" HorizontalAlignment="Left" Margin="40,118,0,0" VerticalAlignment="Top" Click="btnAddContinent_Click" Background="#FFF6E1C3" FontSize="13" Foreground="#FFA84448" BorderBrush="#FFF6E1C3" Height="30" Width="100">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15"></Setter>
                 </Style>
             </Button.Resources>
         </Button>
-        <Button x:Name="btnAddCountry" Content="Add Country" HorizontalAlignment="Center" Margin="0,345,0,0" VerticalAlignment="Top" Click="btnAddCountry_Click" Background="#FFF6E1C3" FontSize="13" Foreground="#FFA84448" Width="100" Height="30" BorderBrush="#FFF6E1C3">
+        <Button x:Name="btnAddCountry" Content="Add Country" HorizontalAlignment="Left" Margin="40,187,0,0" VerticalAlignment="Top" Click="btnAddCountry_Click" Background="#FFF6E1C3" FontSize="13" Foreground="#FFA84448" Width="100" Height="30" BorderBrush="#FFF6E1C3">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15"></Setter>
                 </Style>
             </Button.Resources>
         </Button>
-        <Button x:Name="btnAddCity" Content="Add City" HorizontalAlignment="Left" Margin="606,340,0,0" VerticalAlignment="Top" Click="btnAddCity_Click" Background="#FFF6E1C3" FontSize="13" Foreground="#FFA84448" Width="100" Height="30" BorderBrush="#FFF6E1C3">
+        <Button x:Name="btnAddCity" Content="Add City" HorizontalAlignment="Left" Margin="40,261,0,0" VerticalAlignment="Top" Click="btnAddCity_Click" Background="#FFF6E1C3" FontSize="13" Foreground="#FFA84448" Width="100" Height="30" BorderBrush="#FFF6E1C3">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15"></Setter>
                 </Style>
             </Button.Resources>
         </Button>
-        <Label Content="Language" HorizontalAlignment="Left" Margin="232,237,0,0" VerticalAlignment="Top" Width="70" Foreground="#FFA84448" FontWeight="Bold"/>
-        <Label Content="Currency" HorizontalAlignment="Left" Margin="232,286,0,0" VerticalAlignment="Top" Width="70" Foreground="#FFA84448" FontWeight="Bold"/>
-        <Label Content="Continents" HorizontalAlignment="Left" Margin="67,26,0,0" VerticalAlignment="Top" Foreground="#FFA84448" FontWeight="Bold" FontSize="15"/>
-        <Label Content="Cities" HorizontalAlignment="Left" Margin="447,26,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="15" Foreground="#FFA84448"/>
-        <Label Content="Countries" HorizontalAlignment="Left" Margin="237,26,0,0" VerticalAlignment="Top" Foreground="#FFA84448" FontSize="15" FontWeight="Bold"/>
+        <Label Content="Language" HorizontalAlignment="Left" Margin="165,314,0,0" VerticalAlignment="Top" Width="70" Foreground="#FFA84448" FontWeight="Bold" RenderTransformOrigin="0.514,0.502"/>
+        <Label Content="Currency" HorizontalAlignment="Left" Margin="164,347,0,0" VerticalAlignment="Top" Width="70" Foreground="#FFA84448" FontWeight="Bold"/>
+        <Label Content="Continents" HorizontalAlignment="Left" Margin="202,56,0,0" VerticalAlignment="Top" Foreground="#FFA84448" FontWeight="Bold" FontSize="15"/>
+        <Label Content="Cities" HorizontalAlignment="Left" Margin="400,56,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="15" Foreground="#FFA84448"/>
+        <Label Content="Countries" HorizontalAlignment="Left" Margin="202,118,0,0" VerticalAlignment="Top" Foreground="#FFA84448" FontSize="15" FontWeight="Bold"/>
 
     </Grid>
 </Window>
