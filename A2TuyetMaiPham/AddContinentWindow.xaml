@@ -5,21 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:A2TuyetMaiPham"
         mc:Ignorable="d"
-        Title="AddContinentWindow" Height="450" Width="800">
+        Title="Add Continent Window" Height="450" Width="800">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/map.jpg" Opacity="0.3"/>
         </Grid.Background>
-        <TextBox x:Name="txtInputContinent" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" AutomationProperties.IsRequiredForForm="True" Height="31" Margin="0,195,0,0"/>
-        <Button x:Name="btnAddContinent" Content="Add Continent" HorizontalAlignment="Left" Margin="539,188,0,0" VerticalAlignment="Top" Click="btnAddContinent_Click" Width="145" Height="45" Background="#FFF6E1C3" BorderBrush="#FFF6E1C3" FontSize="15" FontWeight="Bold" Foreground="#FFA84448">
+        <TextBox x:Name="txtInputContinent" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" AutomationProperties.IsRequiredForForm="True" Height="30" Margin="0,173,0,0"/>
+        <Button x:Name="btnAddContinent" Content="Add Continent" HorizontalAlignment="Left" Margin="563,164,0,0" VerticalAlignment="Top" Click="btnAddContinent_Click" Width="145" Height="45" Background="#FFF6E1C3" BorderBrush="#FFF6E1C3" FontSize="15" FontWeight="Bold" Foreground="#FFA84448">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="20"></Setter>
                 </Style>
             </Button.Resources>
         </Button>
-        <Label x:Name="lblMessage" Content="" HorizontalAlignment="Center" Margin="0,259,0,0" VerticalAlignment="Top" Width="370"/>
-        <Label Content="Continent Name" HorizontalAlignment="Left" Margin="127,196,0,0" VerticalAlignment="Top" Foreground="#FFA84448" FontWeight="Bold" FontSize="15"/>
+        <Label x:Name="lblMessage" Content="" HorizontalAlignment="Center" Margin="0,270,0,0" VerticalAlignment="Top" Width="300" Height="30"/>
+        <Label Content="Continent Name" HorizontalAlignment="Left" Margin="133,173,0,0" VerticalAlignment="Top" Foreground="#FFA84448" FontWeight="Bold" FontSize="15"/>
 
     </Grid>
 </Window>
