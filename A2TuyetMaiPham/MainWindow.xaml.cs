@@ -74,6 +74,13 @@ namespace A2TuyetMaiPham
             tblCountries = adpCountry.GetCountriesInContinent(continentId);
         }
 
+        private void LoadCountryListBox()
+        {
+            lstCountries.ItemsSource = tblCountries.DefaultView;
+            lstCountries.DisplayMemberPath = "CountryName";
+            lstCountries.SelectedValuePath = "CountryId";
+        }
+
         private void cmbContinents_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             GetCountriesInContinent();
@@ -81,9 +88,8 @@ namespace A2TuyetMaiPham
             lblLanguages.Content = "";
             lblCurrency.Content = "";
 
-            lstCountries.ItemsSource = tblCountries.DefaultView;
-            lstCountries.DisplayMemberPath = "CountryName";
-            lstCountries.SelectedValuePath = "CountryId";
+            LoadCountryListBox();
+
         }
 
         private void lstCountries_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -129,6 +135,7 @@ namespace A2TuyetMaiPham
             if(addCountryWindow.IsAdded == true)
             {
                 GetCountriesInContinent();
+                LoadCountryListBox();
             }
         }
 

@@ -43,9 +43,11 @@ namespace A2TuyetMaiPham
             }
             else
             {
+                lblMessage.Content = "";
                 adpContinent.Insert(continentName);
                 MessageBox.Show("New Continent is Added!", "Add Continent", MessageBoxButton.OK, MessageBoxImage.Information);
-                _isAdded = true;               
+                _isAdded = true;
+                
             }            
 
         }

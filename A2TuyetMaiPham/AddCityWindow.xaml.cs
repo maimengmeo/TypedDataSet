@@ -59,9 +59,11 @@ namespace A2TuyetMaiPham
             }
             else
             {
+                lblMessage.Content = "";
                 adpCity.Insert(cityName, isCapital, cityPopulation, countryId);
                 MessageBox.Show("New City is Added!", "Add City", MessageBoxButton.OK, MessageBoxImage.Information);
                 isAdded = true;
+                
             }
 
         }

@@ -66,9 +66,11 @@ namespace A2TuyetMaiPham
             }
             else
             {
+                lblMessage.Content = "";
                 adpCountry.Insert(countryName, language, currency, continentId);
                 MessageBox.Show("New Country is Added!", "Add Country", MessageBoxButton.OK, MessageBoxImage.Information);
                 isAdded = true;
+                
             }
             
         }
