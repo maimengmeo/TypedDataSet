@@ -42,9 +42,27 @@ namespace A2TuyetMaiPham
         {
             string cityName = txtCityName.Text;
             string cityPopulation = txtCityPopulation.Text;
-            string isCapital = chkCapital.ToString();
+            bool isCapital = chkCapital.IsChecked ?? false;
+            int countryId = Convert.ToInt32(cmbCountries.SelectedValue);
 
-            
+            if (String.IsNullOrWhiteSpace(cityName))
+            {
+                lblMessage.Content = "Invalid city name. Try Again!";
+            }
+            else if (String.IsNullOrWhiteSpace(cityPopulation))
+            {
+                lblMessage.Content = "Invalid city population. Try Again!";
+            }
+            else if (cmbCountries.SelectedItem == null)
+            {
+                lblMessage.Content = "Please select a Country!";
+            }
+            else
+            {
+                adpCity.Insert(cityName, isCapital, cityPopulation, countryId);
+                MessageBox.Show("New City is Added!", "Add City", MessageBoxButton.OK, MessageBoxImage.Information);
+                isAdded = true;
+            }
 
         }
     }

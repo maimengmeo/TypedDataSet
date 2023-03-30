@@ -13,7 +13,7 @@
         <TextBox x:Name="txtCityPopulation" HorizontalAlignment="Left" Margin="290,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <CheckBox x:Name="chkCapital" Content="Is Capital" HorizontalAlignment="Left" Margin="449,81,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnAddCity" Content="Add City" HorizontalAlignment="Left" Margin="290,202,0,0" VerticalAlignment="Top" Click="btnAddCity_Click"/>
-        <Label Content="" HorizontalAlignment="Center" Margin="0,155,0,0" VerticalAlignment="Top" Width="214"/>
+        <Label x:Name="lblMessage" Content="" HorizontalAlignment="Center" Margin="0,155,0,0" VerticalAlignment="Top" Width="214"/>
         <Label Content="City Name" HorizontalAlignment="Left" Margin="194,76,0,0" VerticalAlignment="Top" Width="91"/>
         <Label Content="Population" HorizontalAlignment="Left" Margin="194,112,0,0" VerticalAlignment="Top" Width="91"/>
         <Label Content="Select a Country" HorizontalAlignment="Left" Margin="38,30,0,0" VerticalAlignment="Top"/>

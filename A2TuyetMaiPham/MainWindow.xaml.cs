@@ -139,6 +139,7 @@ namespace A2TuyetMaiPham
             addCityWindow = new AddCityWindow(adpCity, tblCountries);
             addCityWindow.Owner = this;
             addCityWindow.ShowDialog();
+
         }
     }
 }
