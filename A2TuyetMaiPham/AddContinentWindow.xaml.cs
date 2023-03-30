@@ -22,18 +22,16 @@ namespace A2TuyetMaiPham
     public partial class AddContinentWindow : Window
     {
         private WorldDBTableAdapters.ContinentTableAdapter adpContinent;
-        private WorldDB.ContinentDataTable tblContinents;
-        public bool isAdded;
+        private bool _isAdded;
 
         public AddContinentWindow(WorldDBTableAdapters.ContinentTableAdapter adpContinent,
                                     WorldDB.ContinentDataTable tblContinents)
         {
             InitializeComponent();
             this.adpContinent = adpContinent;
-            this.tblContinents = tblContinents;
         }
 
-        public bool IsAdded { get { return isAdded; } }
+        public bool IsAdded { get { return _isAdded; } }
 
         private void btnAddContinent_Click(object sender, RoutedEventArgs e)
         {
@@ -47,7 +45,7 @@ namespace A2TuyetMaiPham
             {
                 adpContinent.Insert(continentName);
                 MessageBox.Show("New Continent is Added!", "Add Continent", MessageBoxButton.OK, MessageBoxImage.Information);
-                isAdded = true;               
+                _isAdded = true;               
             }            
 
         }

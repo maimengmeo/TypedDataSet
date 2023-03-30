@@ -19,11 +19,33 @@ namespace A2TuyetMaiPham
     /// </summary>
     public partial class AddCityWindow : Window
     {
-        WorldDBTableAdapters.CityTableAdapter adpCity;
-        public AddCityWindow(WorldDBTableAdapters.CityTableAdapter adpCity)
+        private WorldDBTableAdapters.CityTableAdapter adpCity;
+        private WorldDB.CountryDataTable tblCountries;
+        private bool isAdded;
+        public AddCityWindow(WorldDBTableAdapters.CityTableAdapter adpCity, WorldDB.CountryDataTable tblCountries)
         {
             InitializeComponent();
             this.adpCity = adpCity;
+            this.tblCountries = tblCountries;
+        }
+
+        public bool IsAdded { get { return isAdded; } }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            cmbCountries.ItemsSource = tblCountries.DefaultView;
+            cmbCountries.DisplayMemberPath = "CountryName";
+            cmbCountries.SelectedValuePath = "CountryId";
+        }
+
+        private void btnAddCity_Click(object sender, RoutedEventArgs e)
+        {
+            string cityName = txtCityName.Text;
+            string cityPopulation = txtCityPopulation.Text;
+            string isCapital = chkCapital.ToString();
+
+            
+
         }
     }
 }

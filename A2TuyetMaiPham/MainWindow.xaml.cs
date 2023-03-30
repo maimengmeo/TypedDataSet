@@ -62,11 +62,16 @@ namespace A2TuyetMaiPham
             GetAllContinents();
         }
 
+        private void GetCountries()
+        {
+            int continentId = Convert.ToInt32(cmbContinents.SelectedValue);
+            adpCountry.FillCountries(tblCountries);
+        }
+
         private void GetCountriesInContinent()
         {
             int continentId = Convert.ToInt32(cmbContinents.SelectedValue);
-            adpCountry.FillCountries(tblCountries, continentId);
-            
+            tblCountries = adpCountry.GetCountriesInContinent(continentId);
         }
 
         private void cmbContinents_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -109,7 +114,7 @@ namespace A2TuyetMaiPham
             addContinentWindow.Owner = this;
             addContinentWindow.ShowDialog();
 
-            if (addContinentWindow.isAdded == true)
+            if (addContinentWindow.IsAdded == true)
             {
                 GetAllContinents();
             }
@@ -117,14 +122,21 @@ namespace A2TuyetMaiPham
 
         private void btnAddCountry_Click(object sender, RoutedEventArgs e)
         {
-            addCountryWindow = new AddCountryWindow(tblContinent, adpCountry);
+            addCountryWindow = new AddCountryWindow(adpCountry, tblContinents);
             addCountryWindow.Owner = this;
             addCountryWindow.ShowDialog();
+
+            if(addCountryWindow.IsAdded == true)
+            {
+                GetCountriesInContinent();
+            }
         }
 
         private void btnAddCity_Click(object sender, RoutedEventArgs e)
         {
-            addCityWindow = new AddCityWindow(adpCity);
+            GetCountries();
+
+            addCityWindow = new AddCityWindow(adpCity, tblCountries);
             addCityWindow.Owner = this;
             addCityWindow.ShowDialog();
         }

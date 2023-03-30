@@ -21,6 +21,7 @@ namespace A2TuyetMaiPham
     {
         private WorldDBTableAdapters.CountryTableAdapter adpCountry;
         private WorldDB.ContinentDataTable tblContinents;
+        private bool isAdded;
 
         public AddCountryWindow(WorldDBTableAdapters.CountryTableAdapter adpCountry,
                                  WorldDB.ContinentDataTable tblContinents)
@@ -30,9 +31,46 @@ namespace A2TuyetMaiPham
             this.tblContinents = tblContinents;
         }
 
+        public bool IsAdded { get { return isAdded; } }
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            cmbContinents.ItemsSource = tblContinents.DefaultView;
+            cmbContinents.DisplayMemberPath = "ContinentName";
+            cmbContinents.SelectedValuePath = "ContinentId";
+        }
 
+        private void btnAddCountry_Click(object sender, RoutedEventArgs e)
+        {
+            
+            string countryName = txtCountryName.Text;
+            string language  = txtLanguage.Text;
+            string currency = txtCurrency.Text;
+            int continentId  = Convert.ToInt32(cmbContinents.SelectedValue);
+
+            if (String.IsNullOrWhiteSpace(countryName))
+            {
+                lblMessage.Content = "Country Name is invalid. Try again!";
+            }
+            else if (String.IsNullOrWhiteSpace(language))
+            {
+                lblMessage.Content = "Language is invalid. Try again!";
+            }
+            else if (String.IsNullOrWhiteSpace(currency))
+            {
+                lblMessage.Content = "Currency is invalid. Try again!";
+            }
+            else if (cmbContinents.SelectedItem == null)
+            {
+                lblMessage.Content = "Please select Continent";
+            }
+            else
+            {
+                adpCountry.Insert(countryName, language, currency, continentId);
+                MessageBox.Show("New Country is Added!", "Add Country", MessageBoxButton.OK, MessageBoxImage.Information);
+                isAdded = true;
+            }
+            
         }
     }
 }

@@ -7,7 +7,7 @@
 <DiagramLayout xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ex:showrelationlabel="False" ViewPortX="59" ViewPortY="0" xmlns:ex="urn:schemas-microsoft-com:xml-msdatasource-layout-extended" xmlns="urn:schemas-microsoft-com:xml-msdatasource-layout">
   <Shapes>
     <Shape ID="DesignTable:Continent" ZOrder="5" X="382" Y="290" Height="115" Width="202" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
-    <Shape ID="DesignTable:Country" ZOrder="1" X="69" Y="111" Height="172" Width="249" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
+    <Shape ID="DesignTable:Country" ZOrder="1" X="69" Y="111" Height="210" Width="279" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
     <Shape ID="DesignTable:City" ZOrder="3" X="407" Y="97" Height="172" Width="195" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
   </Shapes>
   <Connectors>
@@ -15,27 +15,31 @@
       <RoutePoints>
         <Point>
           <X>382</X>
-          <Y>310</Y>
+          <Y>405</Y>
         </Point>
         <Point>
-          <X>301</X>
-          <Y>310</Y>
+          <X>260</X>
+          <Y>405</Y>
         </Point>
         <Point>
-          <X>301</X>
-          <Y>283</Y>
+          <X>260</X>
+          <Y>321</Y>
         </Point>
       </RoutePoints>
     </Connector>
     <Connector ID="DesignRelation:FK_City_Country" ZOrder="2" LineWidth="11">
       <RoutePoints>
         <Point>
-          <X>318</X>
-          <Y>152</Y>
+          <X>348</X>
+          <Y>286</Y>
         </Point>
         <Point>
-          <X>407</X>
-          <Y>152</Y>
+          <X>501</X>
+          <Y>286</Y>
+        </Point>
+        <Point>
+          <X>501</X>
+          <Y>269</Y>
         </Point>
       </RoutePoints>
     </Connector>

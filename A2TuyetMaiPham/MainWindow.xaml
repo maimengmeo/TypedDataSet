@@ -9,12 +9,14 @@
     <Grid>
         <ComboBox x:Name="cmbContinents" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cmbContinents_SelectionChanged"/>
         <ListBox x:Name="lstCountries" d:ItemsSource="{d:SampleData ItemCount=5}" Height="NaN" Margin="153,67,497,218" Width="NaN" SelectionChanged="lstCountries_SelectionChanged"/>
-        <Label x:Name="lblLanguages" Content="Label" HorizontalAlignment="Left" Margin="328,67,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.368,0.579" Width="183"/>
-        <Label x:Name="lblCurrency" Content="Label" HorizontalAlignment="Left" Margin="328,116,0,0" VerticalAlignment="Top" Width="183"/>
+        <Label x:Name="lblLanguages" Content="Label" HorizontalAlignment="Left" Margin="428,97,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.368,0.579" Width="112"/>
+        <Label x:Name="lblCurrency" Content="Label" HorizontalAlignment="Left" Margin="428,146,0,0" VerticalAlignment="Top" Width="120"/>
         <DataGrid x:Name="grdCities" d:ItemsSource="{d:SampleData ItemCount=5}" Height="NaN" Margin="19,236,464,32" Width="NaN"/>
         <Button x:Name="btnAddContinent" Content="Add Continent" HorizontalAlignment="Left" Margin="400,255,0,0" VerticalAlignment="Top" Click="btnAddContinent_Click"/>
         <Button x:Name="btnAddCountry" Content="Add Country" HorizontalAlignment="Left" Margin="400,299,0,0" VerticalAlignment="Top" Click="btnAddCountry_Click"/>
         <Button x:Name="btnAddCity" Content="Add City" HorizontalAlignment="Left" Margin="400,342,0,0" VerticalAlignment="Top" Click="btnAddCity_Click"/>
+        <Label Content="Language" HorizontalAlignment="Left" Margin="322,97,0,0" VerticalAlignment="Top" Width="70"/>
+        <Label Content="Currency" HorizontalAlignment="Left" Margin="322,146,0,0" VerticalAlignment="Top" Width="70"/>
 
     </Grid>
 </Window>
