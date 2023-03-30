@@ -14,3 +14,9 @@ C:\Users\Wilton Ngo\Documents\C#\A2TuyetMaiPham\A2TuyetMaiPham\obj\Debug\A2Tuyet
 C:\Users\Wilton Ngo\Documents\C#\A2TuyetMaiPham\A2TuyetMaiPham\obj\Debug\A2TuyetMaiPham.csproj.CoreCompileInputs.cache
 C:\Users\Wilton Ngo\Documents\C#\A2TuyetMaiPham\A2TuyetMaiPham\obj\Debug\A2TuyetMaiPham.exe
 C:\Users\Wilton Ngo\Documents\C#\A2TuyetMaiPham\A2TuyetMaiPham\obj\Debug\A2TuyetMaiPham.pdb
+C:\Users\Wilton Ngo\Documents\C#\A2TuyetMaiPham\A2TuyetMaiPham\obj\Debug\AddCityWindow.g.cs
+C:\Users\Wilton Ngo\Documents\C#\A2TuyetMaiPham\A2TuyetMaiPham\obj\Debug\AddContinentWindow.g.cs
+C:\Users\Wilton Ngo\Documents\C#\A2TuyetMaiPham\A2TuyetMaiPham\obj\Debug\AddCountryWindow.g.cs
+C:\Users\Wilton Ngo\Documents\C#\A2TuyetMaiPham\A2TuyetMaiPham\obj\Debug\AddCityWindow.baml
+C:\Users\Wilton Ngo\Documents\C#\A2TuyetMaiPham\A2TuyetMaiPham\obj\Debug\AddContinentWindow.baml
+C:\Users\Wilton Ngo\Documents\C#\A2TuyetMaiPham\A2TuyetMaiPham\obj\Debug\AddCountryWindow.baml

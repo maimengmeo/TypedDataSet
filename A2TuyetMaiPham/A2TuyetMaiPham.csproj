@@ -55,11 +55,32 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddCityWindow.xaml.cs">
+      <DependentUpon>AddCityWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddContinentWindow.xaml.cs">
+      <DependentUpon>AddContinentWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddCountryWindow.xaml.cs">
+      <DependentUpon>AddCountryWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WorldDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>WorldDB.xsd</DependentUpon>
     </Compile>
+    <Page Include="AddCityWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddContinentWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddCountryWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
