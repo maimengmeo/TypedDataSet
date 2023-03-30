@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/map.jpg" Opacity="0.4"/>
+            <ImageBrush ImageSource="/map.jpg" Opacity="0.3"/>
         </Grid.Background>
         <ComboBox x:Name="cmbContinents" HorizontalAlignment="Left" Margin="202,92,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cmbContinents_SelectionChanged" Text="Select Continent">
             <ComboBox.Background>
