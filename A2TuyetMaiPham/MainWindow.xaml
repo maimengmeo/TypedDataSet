@@ -19,8 +19,8 @@
             </ComboBox.Background>
         </ComboBox>
         <ListBox x:Name="lstCountries" d:ItemsSource="{d:SampleData ItemCount=5}" Height="NaN" Margin="202,153,459,133" SelectionChanged="lstCountries_SelectionChanged" Width="130"/>
-        <Label x:Name="lblLanguages" Content="" HorizontalAlignment="Left" Margin="247,314,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.541" Width="94" BorderBrush="#FFA84448" Background="#FFF6E1C3"/>
-        <Label x:Name="lblCurrency" Content="" HorizontalAlignment="Left" Margin="243,347,0,0" VerticalAlignment="Top" Width="98" BorderBrush="#FFA84448" Background="#FFF6E1C3"/>
+        <Label x:Name="lblLanguages" Content="" HorizontalAlignment="Left" Margin="243,314,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.541" Width="94" BorderBrush="#FFA84448" Background="#FFF6E1C3"/>
+        <Label x:Name="lblCurrency" Content="" HorizontalAlignment="Left" Margin="243,347,0,0" VerticalAlignment="Top" Width="94" BorderBrush="#FFA84448" Background="#FFF6E1C3"/>
         <DataGrid x:Name="grdCities" d:ItemsSource="{d:SampleData ItemCount=5}" Height="NaN" Margin="402,90,78,133" Width="320"/>
         <Button x:Name="btnAddContinent" Content="Add Continent" HorizontalAlignment="Left" Margin="40,118,0,0" VerticalAlignment="Top" Click="btnAddContinent_Click" Background="#FFF6E1C3" FontSize="13" Foreground="#FFA84448" BorderBrush="#FFF6E1C3" Height="30" Width="100" FontWeight="Bold">
             <Button.Resources>

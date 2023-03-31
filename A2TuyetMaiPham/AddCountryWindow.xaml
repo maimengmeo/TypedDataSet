@@ -21,7 +21,7 @@
         </Button>
         <TextBox x:Name="txtLanguage" HorizontalAlignment="Center" Margin="0,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="30"/>
         <TextBox x:Name="txtCurrency" HorizontalAlignment="Center" Margin="0,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="30"/>
-        <Label x:Name="lblMessage" Content="" HorizontalAlignment="Center" Margin="0,280,0,0" VerticalAlignment="Top" Width="300" Foreground="Red" FontSize="17" FontWeight="Bold" Height="30"/>
+        <Label x:Name="lblMessage" Content="" HorizontalAlignment="Center" Margin="0,280,0,0" VerticalAlignment="Top" Width="300" Foreground="Red" FontSize="17" FontWeight="Bold" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         <Label Content="Country Name" HorizontalAlignment="Left" Margin="133,125,0,0" VerticalAlignment="Top" Width="134" Foreground="#FFA84448" FontWeight="Bold" FontSize="15"/>
         <Label Content="Language" HorizontalAlignment="Left" Margin="133,180,0,0" VerticalAlignment="Top" Width="99" Foreground="#FFA84448" FontWeight="Bold" FontSize="15"/>
         <Label Content="Currency" HorizontalAlignment="Left" Margin="133,235,0,0" VerticalAlignment="Top" Width="99" Foreground="#FFA84448" FontWeight="Bold" FontSize="15"/>

@@ -47,8 +47,12 @@ namespace A2TuyetMaiPham
             string language  = txtLanguage.Text;
             string currency = txtCurrency.Text;
             int continentId  = Convert.ToInt32(cmbContinents.SelectedValue);
-
-            if (String.IsNullOrWhiteSpace(countryName))
+            
+            if (cmbContinents.SelectedItem == null)
+            {
+                lblMessage.Content = "Please select Continent";
+            }
+            else if (String.IsNullOrWhiteSpace(countryName))
             {
                 lblMessage.Content = "Country Name is invalid. Try again!";
             }
@@ -59,10 +63,6 @@ namespace A2TuyetMaiPham
             else if (String.IsNullOrWhiteSpace(currency))
             {
                 lblMessage.Content = "Currency is invalid. Try again!";
-            }
-            else if (cmbContinents.SelectedItem == null)
-            {
-                lblMessage.Content = "Please select Continent";
             }
             else
             {

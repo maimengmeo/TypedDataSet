@@ -45,17 +45,13 @@ namespace A2TuyetMaiPham
             bool isCapital = chkCapital.IsChecked ?? false;
             int countryId = Convert.ToInt32(cmbCountries.SelectedValue);
 
-            if (String.IsNullOrWhiteSpace(cityName))
-            {
-                lblMessage.Content = "Invalid city name. Try Again!";
-            }
-            else if (String.IsNullOrWhiteSpace(cityPopulation))
-            {
-                lblMessage.Content = "Invalid city population. Try Again!";
-            }
-            else if (cmbCountries.SelectedItem == null)
+            if (cmbCountries.SelectedItem == null)
             {
                 lblMessage.Content = "Please select a Country!";
+            }
+            else if (String.IsNullOrWhiteSpace(cityName))
+            {
+                lblMessage.Content = "Invalid city name. Try Again!";
             }
             else
             {
