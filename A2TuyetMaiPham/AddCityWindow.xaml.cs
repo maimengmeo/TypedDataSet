@@ -61,11 +61,19 @@ namespace A2TuyetMaiPham
             {
                 lblMessage.Content = "";
                 adpCity.Insert(cityName, isCapital, cityPopulation, countryId);
-                MessageBox.Show("New City is Added!", "Add City", MessageBoxButton.OK, MessageBoxImage.Information);
                 isAdded = true;
+                MessageBox.Show("New City is Added!", "Add City", MessageBoxButton.OK, MessageBoxImage.Information);
+                txtCityName.Text = txtCityPopulation.Text = "";
+                txtCityName.Focus();
+                
                 
             }
 
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

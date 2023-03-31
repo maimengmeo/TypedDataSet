@@ -27,10 +27,14 @@ namespace A2TuyetMaiPham
         private WorldDB.ContinentDataTable tblContinents;
         private WorldDB.CountryDataTable tblCountries;
         private WorldDB.CityDataTable tblCities;
+        private WorldDB.CountryDataTable tblCountriesInContinent;
 
         private AddContinentWindow addContinentWindow;
         private AddCountryWindow addCountryWindow;
         private AddCityWindow addCityWindow;
+
+        private int continentId;
+        private int countryId;
 
         public MainWindow()
         {
@@ -47,19 +51,20 @@ namespace A2TuyetMaiPham
 
         }
 
-        private void GetAllContinents()
-        {
-            adpContinent.FillContinent(tblContinents);
-            
-            cmbContinents.ItemsSource = tblContinents.DefaultView;
-            cmbContinents.DisplayMemberPath = "ContinentName";
-            cmbContinents.SelectedValuePath = "ContinentId";
-
-        }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             GetAllContinents();
+        }
+
+        private void GetAllContinents()
+        {
+            adpContinent.FillContinent(tblContinents);
+
+            cmbContinents.ItemsSource = tblContinents.DefaultView;
+            cmbContinents.DisplayMemberPath = "ContinentName";
+            cmbContinents.SelectedValuePath = "ContinentId";
+
         }
 
         private void GetCountries()
@@ -70,15 +75,26 @@ namespace A2TuyetMaiPham
 
         private void GetCountriesInContinent()
         {
-            int continentId = Convert.ToInt32(cmbContinents.SelectedValue);
-            tblCountries = adpCountry.GetCountriesInContinent(continentId);
+            continentId = Convert.ToInt32(cmbContinents.SelectedValue);
+            tblCountriesInContinent = adpCountry.GetCountriesInContinent(continentId);
+        }
+
+        private void GetCitiesInCountry(int countryId)
+        {
+            adpCity.FillCities(tblCities, countryId);
         }
 
         private void LoadCountryListBox()
         {
-            lstCountries.ItemsSource = tblCountries.DefaultView;
+            lstCountries.ItemsSource = tblCountriesInContinent.DefaultView;
             lstCountries.DisplayMemberPath = "CountryName";
             lstCountries.SelectedValuePath = "CountryId";
+        }
+
+        private void LoadCityGrid(int countryId)
+        {
+            GetCitiesInCountry(countryId);
+            grdCities.ItemsSource = tblCities.DefaultView;
         }
 
         private void cmbContinents_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -94,9 +110,9 @@ namespace A2TuyetMaiPham
 
         private void lstCountries_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            int countryId = Convert.ToInt32(lstCountries.SelectedValue);
+            countryId = Convert.ToInt32(lstCountries.SelectedValue);
             
-            var country = tblCountries.FindByCountryId(countryId);
+            var country = tblCountriesInContinent.FindByCountryId(countryId);
 
             if (country != null)
             {
@@ -104,15 +120,10 @@ namespace A2TuyetMaiPham
                 lblCurrency.Content = country.Currency;
             }
 
-            GetCitiesInCountry(countryId);
-            grdCities.ItemsSource = tblCities.DefaultView;
+            LoadCityGrid(countryId);
 
         }
 
-        private void GetCitiesInCountry(int countryId)
-        {
-            adpCity.FillCities(tblCities, countryId);
-        }
 
         private void btnAddContinent_Click(object sender, RoutedEventArgs e)
         {
@@ -146,6 +157,11 @@ namespace A2TuyetMaiPham
             addCityWindow = new AddCityWindow(adpCity, tblCountries);
             addCityWindow.Owner = this;
             addCityWindow.ShowDialog();
+
+            if (addCityWindow.IsAdded == true)
+            {
+                LoadCityGrid(countryId);
+            }
 
         }
     }

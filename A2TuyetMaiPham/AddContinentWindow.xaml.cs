@@ -45,14 +45,19 @@ namespace A2TuyetMaiPham
             {
                 lblMessage.Content = "";
                 adpContinent.Insert(continentName);
-                MessageBox.Show("New Continent is Added!", "Add Continent", MessageBoxButton.OK, MessageBoxImage.Information);
                 _isAdded = true;
+                MessageBox.Show("New Continent is Added!", "Add Continent", MessageBoxButton.OK, MessageBoxImage.Information);
+                txtInputContinent.Text = "";
+                txtInputContinent.Focus();
+                
                 
             }            
 
         }
 
-
-
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
